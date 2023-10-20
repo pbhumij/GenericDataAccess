@@ -8,7 +8,7 @@ enum APIError: Error{
     case responseUnsuccessful
 }
 
-struct RestClient<T: Codable>{
+struct GenericRestClient<T: Codable>{
     let baseURL: URL
     var headers: [String: String] = ["Content-Type": "application/json"]
     
