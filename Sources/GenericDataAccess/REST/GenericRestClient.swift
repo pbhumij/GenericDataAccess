@@ -22,7 +22,7 @@ struct GenericRestClient<T: Codable>{
         request.allHTTPHeaderFields = headers
         var data: Data?
         var response: URLResponse?
-        if #available(macOS 12.0, *) {
+        if #available(iOS 15.0, macOS 12.0, *) {
             (data, response) = try await URLSession.shared.data(for: request)
         } else {
        
@@ -48,7 +48,7 @@ struct GenericRestClient<T: Codable>{
         }
         var data: Data?
         var response: URLResponse?
-        if #available(macOS 12.0, *) {
+        if #available(iOS 15.0, macOS 12.0, *) {
             (data, response) = try await URLSession.shared.data(for: request)
         } else {
             fatalError("Unsupported OS version")
@@ -73,7 +73,7 @@ struct GenericRestClient<T: Codable>{
         }
         var data: Data?
         var response: URLResponse?
-        if #available(macOS 12.0, *) {
+        if #available(iOS 15.0, macOS 12.0, *) {
             (data, response) = try await URLSession.shared.data(for: request)
         } else {
             fatalError("Unsupported OS version")
@@ -92,7 +92,7 @@ struct GenericRestClient<T: Codable>{
         
         var data: Data?
         var response: URLResponse?
-        if #available(macOS 12.0, *) {
+        if #available(iOS 15.0, macOS 12.0, *) {
             (data, response) = try await URLSession.shared.data(for: request)
         } else {
             fatalError("Unsupported OS version")
